@@ -1,0 +1,497 @@
+.how-it-works {
+  background: #0f172a;
+  padding: 4rem 1.5rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
+.how-it-works-title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.how-it-works-underline {
+  width: 80px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 auto 2.5rem;
+}
+
+/* Carousel */
+.how-carousel {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+.how-carousel-track {
+  position: relative;
+  min-height: 320px;
+}
+
+.how-card {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease, visibility 0.55s;
+}
+
+.how-card--active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.how-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.how-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.how-card-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.how-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.how-card-graphic {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Step graphics */
+.how-graphic {
+  width: 100%;
+  max-width: 200px;
+}
+
+.how-graphic-calendar {
+  position: relative;
+  background: rgba(30, 41, 59, 0.8);
+  border-radius: 10px;
+  padding: 0.75rem 0.5rem 1rem;
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  max-width: 520px;
+  width: 100%;
+}
+
+.how-calendar-spine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 6px;
+  background: #475569;
+  border-radius: 0 0 3px 3px;
+}
+
+.how-calendar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-top: 0.25rem;
+}
+
+.how-calendar-nav-btn {
+  appearance: none;
+  border: 1px solid rgba(71, 85, 105, 0.6);
+  background: rgba(30, 41, 59, 0.8);
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+  padding-bottom: 15px;
+}
+
+.how-calendar-nav-btn:hover {
+  background: rgba(71, 85, 105, 0.4);
+  border-color: #22c55e;
+}
+
+.how-calendar-nav-label {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.how-calendar-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.how-calendar-month-block {
+  min-width: 0;
+  border: 1px solid #475569;
+  border-radius: 10px;
+}
+
+.how-calendar-month-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.how-calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.how-calendar-weekday {
+  text-align: center;
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+.how-calendar-three .how-calendar-grid {
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.how-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.how-calendar-day {
+  appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.15rem;
+  border-radius: 4px;
+  min-width: 14px;
+  min-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.how-calendar-three .how-calendar-day {
+  min-width: 12px;
+  min-height: 16px;
+  font-size: 0.6rem;
+}
+
+.how-calendar-day:hover:not(.how-calendar-day--empty) {
+  background: rgba(71, 85, 105, 0.4);
+  color: #fff;
+}
+
+.how-calendar-day--empty {
+  cursor: default;
+  pointer-events: none;
+}
+
+.how-calendar-day--free {
+  color: #22c55e;
+  font-weight: 600;
+  background: rgba(34, 197, 94, 0.15);
+}
+
+.how-calendar-day--free:hover {
+  background: rgba(34, 197, 94, 0.25);
+}
+
+.how-calendar-day--selected {
+  color: #fff;
+  background: #22c55e;
+  font-weight: 700;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.5);
+}
+
+.how-calendar-day--selected:hover {
+  background: #16a34a;
+}
+
+.how-graphic-robot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.how-robot-head {
+  width: 48px;
+  height: 40px;
+  background: #64748b;
+  border-radius: 10px 10px 4px 4px;
+  position: relative;
+}
+
+.how-robot-eyes {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.how-robot-eye {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
+}
+
+.how-robot-body {
+  width: 64px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+}
+
+.how-robot-bars {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 50px;
+}
+
+.how-robot-bar {
+  width: 6px;
+  background: linear-gradient(180deg, #38bdf8 0%, #22c55e 100%);
+  border-radius: 3px;
+  min-height: 8px;
+}
+
+.how-graphic-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.how-progress-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.how-progress-ring svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.how-progress-bg {
+  fill: none;
+  stroke: rgba(71, 85, 105, 0.5);
+  stroke-width: 2.5;
+}
+
+.how-progress-fill {
+  fill: none;
+  stroke: #22c55e;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease;
+}
+
+.how-progress-ring svg {
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.3));
+}
+
+.how-progress-bg {
+  stroke: rgba(71, 85, 105, 0.6);
+}
+
+.how-progress-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.how-progress-label {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.how-graphic-chart {
+  padding: 0.5rem;
+}
+
+.how-line-chart {
+  width: 100%;
+  height: auto;
+}
+
+.how-line-chart-line {
+  fill: none;
+  stroke: #22c55e;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.how-line-chart-dot {
+  fill: #22c55e;
+}
+
+/* Carousel buttons */
+.how-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(71, 85, 105, 0.8);
+  background: rgba(30, 41, 59, 0.9);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.how-carousel-btn:hover {
+  background: rgba(51, 65, 85, 0.95);
+  border-color: #22c55e;
+}
+
+.how-carousel-btn--prev {
+  left: -12px;
+}
+
+.how-carousel-btn--next {
+  right: -12px;
+}
+
+@media (min-width: 500px) {
+  .how-carousel-btn--prev {
+    left: -20px;
+  }
+
+  .how-carousel-btn--next {
+    right: -20px;
+  }
+}
+
+/* Dots */
+.how-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.how-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(71, 85, 105, 0.6);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.how-dot:hover {
+  background: rgba(71, 85, 105, 0.9);
+}
+
+.how-dot--active {
+  background: #22c55e;
+  transform: scale(1.2);
+}
+
+/* CTA */
+.how-cta {
+  display: block;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  background: #22c55e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.how-cta:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}

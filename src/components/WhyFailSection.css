@@ -1,0 +1,123 @@
+.why-fail {
+  background: #161c28;
+  padding: 4rem 1.5rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
+.why-fail-title,
+.why-fail-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.why-fail-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2.5rem;
+  white-space: normal;
+}
+
+.why-fail-line {
+  flex: 1;
+  min-width: 40px;
+  max-width: 120px;
+  height: 1px;
+  background: #4c535d;
+}
+
+.why-fail-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  background: rgba(22, 28, 40, 0.8);
+  border: 1px solid #4c535d;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.why-fail-column {
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+}
+
+.why-fail-column:not(:last-child) {
+  border-right: 1px solid #4c535d;
+}
+
+.why-fail-problem {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.why-fail-arrow {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+}
+
+.why-fail-divider {
+  border: none;
+  height: 1px;
+  background: #4c535d;
+  margin: 0.75rem 0;
+}
+
+.why-fail-detail {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.why-fail-solution {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.why-fail-solution--highlight {
+  color: #51e68b;
+  font-weight: 500;
+}
+
+.why-fail-tagline {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+@media (max-width: 700px) {
+  .why-fail-box {
+    grid-template-columns: 1fr;
+  }
+
+  .why-fail-column:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #4c535d;
+  }
+
+  .why-fail-title,
+  .why-fail-tagline {
+    flex-wrap: wrap;
+  }
+
+  .why-fail-line {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+}
