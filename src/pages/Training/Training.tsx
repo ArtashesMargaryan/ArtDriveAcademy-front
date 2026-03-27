@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import trainingData from '../data.json'
+import trainingData from '../../data.json'
 import './Training.css'
 
 type QuestionItem = {
